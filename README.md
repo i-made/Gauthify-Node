@@ -12,6 +12,8 @@ This library requires and automatically installs requests.
 To install through NPM:
 
     npm install gauthify
+    OR
+    npm install -g gauthify
     
     
 Usage
@@ -27,7 +29,7 @@ First instantiate a GAuthify object:
 
 ####Create User:####
 
-    auth_instance.create_user(<unique_id>, <display_name>, <email>, <sms_number> *optional, <voice_number> *optional, <meta> *optional, function(response){
+    auth_instance.create_user(<unique_id>, <display_name>, <email>, <sms_number> *optional, <voice_number> *optional, <meta> *optional, function(error, response){
     console.log(response)
     });
 
@@ -43,7 +45,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Update User:####
 
-    auth_instance.update_user(<unique_id>, <email>*optional, <sms_number> *optional, <meta> *optional, <reset_key> *optional, function(response){
+    auth_instance.update_user(<unique_id>, <email>*optional, <sms_number> *optional, <meta> *optional, <reset_key> *optional, function(error, response){
     console.log(response);
     });
 
@@ -59,7 +61,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Delete User:####
 
-    auth_instance.delete_user(<unique_id>, function(response){
+    auth_instance.delete_user(<unique_id>, function(error, response){
     console.log(response);
     });
 
@@ -68,14 +70,14 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Get All Users:####
 
-    auth_instance.get_all_users(function(response){
+    auth_instance.get_all_users(function(error, response){
     console.log(response);
     });
 * callback: List of user hashes
 
 ####Get User:####
 
-    auth_instance.get_user(<unique_id>, function(response){
+    auth_instance.get_user(<unique_id>, function(error, response){
     console.log(response);
     });
 
@@ -84,7 +86,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Get User By Token:####
 
-    auth_instance.get_user_by_token(<token>, function(response){
+    auth_instance.get_user_by_token(<token>, function(error, response){
     console.log(response);
     });
 
@@ -93,7 +95,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Check Auth Code:####
 
-    auth_instance.check_auth(<unique_id>, <auth_code>, <safe_mode> *optional, function(response){
+    auth_instance.check_auth(<unique_id>, <auth_code>, <safe_mode> *optional, function(error, response){
     console.log(response);
     });
 
@@ -104,7 +106,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Send Email:####
 
-    auth_instance.send_email(<email>, <phone_number> *optional, function(response){
+    auth_instance.send_email(<unique_id>, <email> *optional, <phone_number> *optional, function(error, response){
     console.log(response);
     });
 
@@ -114,7 +116,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Send SMS:####
 
-    auth_instance.send_sms(<unique_id>, <sms_number> *optional, function(response){
+    auth_instance.send_sms(<unique_id>, <sms_number> *optional, function(error, response){
     console.log(response);
     });
 
@@ -124,7 +126,7 @@ The user hash returned will have parameters outlined on the GAuthify.com dashboa
 
 ####Send Voice Call:####
 
-    auth_instance.send_voice(<unique_id>, <voice_number> *optional, function(response){
+    auth_instance.send_voice(<unique_id>, <voice_number> *optional, function(error, response){
     console.log(response);
     });
 
@@ -138,7 +140,7 @@ Errors
 --------------
 Up to-date json formatted errors can be grabbed from the server using:
 
-    auth_instance.api_errors(function(response){
+    auth_instance.api_errors(function(error, response){
     console.log(response);
     });
 
