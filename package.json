@@ -1,6 +1,6 @@
 {
   "name": "gauthify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "GAuthify Node Client Library - two factor authentication via SMS/Voice/Email/Google Authenticator",
   "main": "./lib/gauthify.js",
   "directories": {
