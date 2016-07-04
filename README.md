@@ -15,13 +15,13 @@ To install through NPM:
     OR
     npm install -g gauthify
     OR
-    npm install gauthify@0.0.2 #specific version
+    npm install gauthify@1.1.3 #specific version
 
 To install through GIT:
 
     npm install git+https://github.com/ajayimade/Gauthify-Node.git
     OR
-    npm install git+https://github.com/ajayimade/Gauthify-Node.git#0.0.2 #specific version
+    npm install git+https://github.com/ajayimade/Gauthify-Node.git#1.1.3 #specific version
     
 Usage
 --------------
